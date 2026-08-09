@@ -1,11 +1,9 @@
 import tensorflow as tf
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
 
-# Image size
 IMG_SIZE = (224, 224)
 BATCH_SIZE = 32
 
-# Data preprocessing
 datagen = ImageDataGenerator(
     rescale=1./255,
     validation_split=0.2,
@@ -30,7 +28,6 @@ val_data = datagen.flow_from_directory(
     subset="validation"
 )
 
-# CNN Model
 model = tf.keras.models.Sequential([
     tf.keras.layers.Conv2D(32, (3,3), activation='relu', input_shape=(224,224,3)),
     tf.keras.layers.MaxPooling2D(2,2),
