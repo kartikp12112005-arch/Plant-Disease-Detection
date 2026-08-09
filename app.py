@@ -17,7 +17,7 @@ model.compile(
 
 CLASS_NAMES = sorted(os.listdir("dataset"))
 
-st.title("🌱 Plant Disease Detection")
+st.title(" Plant Disease Detection")
 
 uploaded_file = st.file_uploader("Upload Leaf Image", type=["jpg","png","jpeg"])
 
